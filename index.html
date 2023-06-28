@@ -1,8 +1,38 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>JavaScript1</title>
     <script src="./fizzbuzz2.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <h1>FizzBuzz問題</h1>
+    <form onsubmit="handleSubmit(event)">
+      <div>
+        <label for="fizz">FizzNum:</label><br />
+        <input
+          type="number"
+          id="fizz"
+          name="fizz"
+          placeholder="整数値を入力してください"
+          class="input-field"
+        />
+      </div>
+      <div>
+        <label for="buzz">BuzzNum:</label><br />
+        <input
+          type="number"
+          id="buzz"
+          name="buzz"
+          placeholder="整数値を入力してください"
+          class="input-field"
+        />
+      </div>
+      <div class="submit-container">
+        <input type="submit" value="実行" />
+      </div>
+    </form>
+    <h2>[実行]</h2>
+    <!-- DOMによる結果を表示するための領域 -->
+    <div id="result"></div>
+  </body>
 </html>

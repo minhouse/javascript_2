@@ -1,0 +1,58 @@
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* 左揃え */
+  height: 70vh;
+  text-align: left;
+  margin-left: 300px; /* 中央に要素を配置する*/
+  font-family: "Meiryo";
+}
+
+h1 {
+  text-align: left;
+  margin-left: 0; /* マージンを0に設定 */
+  margin-right: auto; /* 右側のマージンを自動に設定 */
+  font-family: "Meiryo";
+}
+
+h2 {
+  text-align: left;
+  margin-left: 0; /* マージンを0に設定 */
+  margin-right: auto; /* 右側のマージンを自動に設定 */
+  font-size: 100%;
+  font-family: "Meiryo";
+}
+
+form div {
+  margin-bottom: 10px;
+  margin-left: 0px;
+}
+
+form label {
+  display: inline-block; /* インラインブロック要素として表示 */
+  margin-right: 0px; /* 右側のマージンを追加 */
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea,
+form select {
+  width: 180px;
+}
+
+form textarea {
+  width: 300px;
+  height: 150px;
+}
+
+form select {
+  width: 80px;
+}
+
+form .submit-container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+}
