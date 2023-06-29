@@ -1,10 +1,10 @@
 // JavaScript課題２
 // DOMはHTMLなどのドキュメントにJavaScriptからアクセスするための仕組み
-// DOMによりオブジェクト化することでJavaScript側からはTMLを操作できる
+// DOMによりオブジェクト化することでJavaScript側からはHTMLを操作できる
 
 // 結果をHTMLの要素に追加
 function appendResult(text) {
-  // HTML要素をJavaScript側で取得するにはgetElementByIdを使う
+  // HTML要素(ノード）をJavaScript側で取得するにはgetElementByIdを使う
   const resultContainer = document.getElementById("result");
   // HTML要素をJavaScriptから生成するにはcreateElementを使いdiv要素を生成してresultItemに代入
   const resultItem = document.createElement("div");
@@ -41,6 +41,10 @@ function fizzBuzz(fizzNum, buzzNum) {
 }
 
 // フォームのサブミットイベントをハンドリング
-const form = document.querySelector("form");
+// querySelectorの仕様は、HTML要素の中から最初に一致したものを取得するというもの
+// HTMLの構造が変わった時に意図した要素が取得できない恐れがあり、HTMLの構造に依存
+// 要素の取得はidを指定してgetElementByIdで取得する
+// const form = document.querySelector("form");
+const form = document.getElementById("form");
 // イベント処理のためにaddEventListenerを使う
 form.addEventListener("submit", handleSubmit);
